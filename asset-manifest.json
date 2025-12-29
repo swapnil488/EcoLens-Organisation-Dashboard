@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/EcoLens-Organisation-Dashboard/static/css/main.a9348368.css",
+    "main.js": "/EcoLens-Organisation-Dashboard/static/js/main.2677b669.js",
+    "index.html": "/EcoLens-Organisation-Dashboard/index.html",
+    "main.a9348368.css.map": "/EcoLens-Organisation-Dashboard/static/css/main.a9348368.css.map",
+    "main.2677b669.js.map": "/EcoLens-Organisation-Dashboard/static/js/main.2677b669.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9348368.css",
+    "static/js/main.2677b669.js"
+  ]
+}

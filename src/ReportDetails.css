@@ -1,0 +1,160 @@
+/* ReportDetails.css (updated) */
+.report-details {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 28px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.report-details h1 {
+  text-align: center;
+  margin-bottom: 22px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* rows */
+.detail-row {
+  margin: 14px 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.detail-row strong {
+  width: 160px;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #555;
+}
+
+.detail-row span {
+  flex: 1;
+}
+
+/* Map */
+.map-container {
+  margin-top: 8px;
+  cursor: pointer;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.18s;
+}
+.map-container:hover {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Images */
+.images-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  margin-top: 8px;
+  padding-bottom: 8px;
+  align-items: center;
+}
+
+.report-main-image {
+  max-height: 240px;
+  border-radius: 8px;
+  cursor: pointer;
+  object-fit: cover;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+  transition: transform 0.12s ease;
+}
+.report-main-image:hover {
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* Update button */
+.update-status-btn {
+  margin-left: 12px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #c19640;
+  color: #fff;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+.update-status-btn:hover {
+  background-color: #b08430;
+}
+
+/* Popup viewer */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+.popup-content {
+  position: relative;
+  background-color: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  max-width: 94vw;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.popup-image {
+  display: block;
+  max-width: 88vw;
+  max-height: 80vh;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px 10px;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.close-btn:hover {
+  background-color: #ff1a1a;
+}
+
+/* Error text for broken images */
+.image-error {
+  color: #b00020;
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .report-details {
+    padding: 18px;
+    margin: 16px;
+  }
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .detail-row strong {
+    width: auto;
+    margin-bottom: 6px;
+  }
+}

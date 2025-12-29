@@ -1,0 +1,266 @@
+/* Home.css */
+.home-page {
+  padding: 20px;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Header */
+header {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  font-size: 14px;
+  color: #333;
+}
+
+.header-right {
+  display: flex;
+  gap: 10px;
+}
+
+.logout-btn {
+  background: #c19640;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #b08430;
+}
+
+.loader {
+  margin-top: 120px;
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}
+
+/* Page title */
+.home-page h1 {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Organisation info */
+.org-info {
+  max-width: 1000px;
+  margin: 0 auto 16px;
+  padding: 12px 16px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.06);
+}
+
+.org-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.pincode-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pincode-pill {
+  display: inline-block;
+  padding: 6px 10px;
+  background: #f1f1f1;
+  border-radius: 999px;
+  font-size: 13px;
+  color: #333;
+  border: 1px solid #e6e6e6;
+}
+
+.no-pincodes,
+.no-reports,
+.fetch-error {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Filters panel */
+.filters-panel {
+  max-width: 1200px;
+  margin: 18px auto;
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.04);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 160px;
+}
+
+.filter-group label {
+  font-size: 13px;
+  color: #444;
+}
+
+.filter-group select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background: #fff;
+}
+
+.severity-group .severity-checkboxes {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.sev-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #333;
+}
+
+/* Filter actions */
+.filter-actions {
+  margin-left: auto;
+}
+
+.reset-btn {
+  background: transparent;
+  border: 1px solid #c19640;
+  color: #c19640;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+
+.reset-btn:hover {
+  background: #c19640;
+  color: #fff;
+}
+
+/* Table wrapper */
+.table-wrapper {
+  max-width: 1200px;
+  margin: 18px auto;
+  overflow-x: auto;
+}
+
+/* Reports table */
+.reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.reports-table th,
+.reports-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.reports-table th {
+  background: #c19640;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
+.reports-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.view-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #c19640;
+  transition: color 0.2s;
+}
+
+.view-btn:hover {
+  color: #b08430;
+}
+
+/* small ID column */
+.id-cell {
+  font-family: monospace;
+  font-size: 13px;
+}
+
+/* Helpful messages */
+.no-reports {
+  padding: 24px;
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.04);
+  margin: 16px auto;
+}
+
+/* fetch error */
+.fetch-error {
+  color: #b00020;
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .filters-panel {
+    gap: 10px;
+  }
+
+  .filter-group {
+    min-width: 140px;
+  }
+
+  .home-page h1 {
+    margin-top: 64px;
+  }
+}
+
+@media (max-width: 600px) {
+  .filters-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  header {
+    top: 10px;
+  }
+}

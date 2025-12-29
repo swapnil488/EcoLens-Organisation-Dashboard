@@ -1,0 +1,192 @@
+/* UpdateReportForm.css - improved styling */
+:root{
+  --accent: #c19640;
+  --accent-dark: #b08430;
+  --bg: #f6f6f6;
+  --card-bg: #ffffff;
+  --muted: #6b6b6b;
+  --danger: #d32f2f;
+  --radius: 10px;
+}
+
+.update-report-form {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Card */
+.card {
+  width: 100%;
+  max-width: 760px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 22px rgba(53, 60, 87, 0.08);
+  padding: 22px;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.card h2 {
+  margin: 0 0 16px 0;
+  font-size: 22px;
+  color: #222;
+  text-align: left;
+}
+
+/* Form layout */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.label {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 110px;
+  resize: vertical;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  font-size: 14px;
+  color: #222;
+  background: #fff;
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.02);
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(193,150,64,0.08);
+}
+
+/* File input and preview */
+.file-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.file-row input[type="file"] {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px dashed #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+
+.preview-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 6px;
+}
+
+.preview-img {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.remove-btn {
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  color: #444;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.remove-btn:hover {
+  background: #fff5e6;
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.submit-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.14s ease;
+}
+.submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+.submit-btn:hover:not(:disabled) {
+  background: var(--accent-dark);
+}
+
+.cancel-btn {
+  background: transparent;
+  border: 1px solid #dcdcdc;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #333;
+}
+.cancel-btn:hover {
+  background: #fff;
+  border-color: #cfcfcf;
+}
+
+/* error and progress */
+.form-error {
+  color: var(--danger);
+  background: rgba(211,47,47,0.06);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(211,47,47,0.08);
+  font-size: 14px;
+}
+
+.progress-text {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* error-message for unauthenticated */
+.error-message {
+  text-align: center;
+  padding: 20px;
+}
+.error-message h1 {
+  color: var(--danger);
+  font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .preview-img {
+    width: 110px;
+    height: 80px;
+  }
+  .card {
+    padding: 16px;
+  }
+}

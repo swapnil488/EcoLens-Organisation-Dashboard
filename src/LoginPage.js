@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { auth } from "./firebase"; // Adjust path as necessary
 import { signInWithEmailAndPassword } from "firebase/auth"; // Import the modular function
+import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 
 const LoginPage = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");       // using email for login
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -22,7 +24,7 @@ const LoginPage = () => {
       .then((idTokenResult) => {
         if (idTokenResult.claims.organisation_user) {
           // Redirect to admin dashboard
-          window.location.href = "/home";
+          navigate("/home");
         } else {
           auth.signOut();
           showPopupMessage("Organisation User access required");

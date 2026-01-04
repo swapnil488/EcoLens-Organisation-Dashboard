@@ -1,4 +1,4 @@
-// UpdateReportForm.js
+// UpdateReportForm.jsx
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { doc, updateDoc, serverTimestamp } from "firebase/firestore";

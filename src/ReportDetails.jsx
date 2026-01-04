@@ -1,4 +1,4 @@
-// ReportDetails.js
+// ReportDetails.jsx
 import React, { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db, auth } from "./firebase"; // Firestore and Auth instance

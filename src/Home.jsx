@@ -1,4 +1,4 @@
-// Home.js
+// Home.jsx
 import React, { useEffect, useState, useMemo } from "react";
 import {
   onSnapshot,
